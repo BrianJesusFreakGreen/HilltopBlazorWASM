@@ -1,0 +1,9 @@
+﻿body {
+}
+.page-header {
+    width: 100%;
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('http://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/hillbanner.jpg');
+}

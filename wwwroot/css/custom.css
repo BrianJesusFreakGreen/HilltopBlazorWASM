@@ -1,0 +1,275 @@
+﻿:root {
+    --section-offset: 70px;
+    --primary-color: #fe5007;
+    --secondary-color:#323232;
+}
+h1 {
+    font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif;
+    text-transform: uppercase;
+    font-size:3.2em;
+    line-height: 1.5em;
+    font-weight:600;
+}
+h4 {
+    font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(0,0,0,0.7) !important;
+    letter-spacing: 0.5em;
+    line-height: 2em;
+}
+h2 {
+    font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    line-height: 1.6em;
+    padding: .4em 0;
+}
+h3 {
+    font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.5em;
+    font-size: 2.5em;
+    margin: 1em;
+}
+.hidden{
+    display:none;
+}
+.shadow-15 {
+    box-shadow: -5px 5px 24px 7px rgb(0 0 0 / 15%);
+}
+.sidebar{
+    background-color: var(--secondary-color) !important;
+}
+.above-fold {
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: top;
+    background-image: url("http://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/hillbanner.jpg");
+}
+.cta-video{
+    padding-bottom:56.25%;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.cta-video-container{
+    width:60%;
+    margin:25px auto;
+}
+.cta-video-container iframe{
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.section1{
+    padding: var(--section-offset) 0;
+}
+.section2{
+    margin-top: 20px;
+    
+}
+.section2.row{
+    --bs-gutter-x: 0 !important;
+}
+.section3 {
+    margin: var(--section-offset) 0;
+    padding: 25px 0;
+}
+.twothirds{
+    width:66%
+}
+.bg-haze{
+    width:100%;
+    background-color: rgba(255,255,255,0.2);
+}
+.bg-haze-fill {
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(255,255,255,0.7);
+}
+.cta{
+    margin-top:40px;
+}
+.cta h1{
+    margin-bottom:40px;
+}
+.btn-white {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #ffffff;    
+}
+.btn-stream {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #323232;  
+}
+.btn-stream:before {
+    font-family: 'Material Icons' !important;
+    font-size: 20px;
+    content: "\e039" !important;
+    line-height: .5em;
+    position: relative;
+    top: 4px;
+}
+.btn-stream:hover {
+    color: #fe5007;
+}
+
+.btn {
+    --margin-y: 5px;
+    --margin-x: 10px;
+    --pad: 15px;
+    margin: var(--margin-y) var(--margin-x);
+    border-radius: 0px;
+    letter-spacing: 3px;
+    font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif !important;
+    padding: var(--pad);
+}
+
+    .btn:hover {
+        
+    }
+
+.inverse-btn{
+    display:inline;
+    padding:3px;
+}
+.inverse-btn:hover{
+    padding:0px;
+}
+.info-flag{
+    width:50%;
+    margin:30px auto;
+    margin-bottom:calc(0px - var(--section-offset));
+    color:var(--primary-color);
+}
+.info-flag-pole {
+    height: 6px;
+    border-top: 5px solid #CABFBB;
+    margin-bottom: -1px;
+}
+.info-flag-banner {
+    background-color: white;
+    background-image:url("http://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/HilltopBackgroundBanner2-1.jpg"); 
+    background-size:400%;
+    background-position:80% 50%;
+    background-repeat:no-repeat;
+    box-shadow:5px 6px 20px 5px rgba(0,0,0,.25);
+    width: 60%;
+    margin: auto;
+    padding: 28px 15px;
+    position:relative;
+}
+.promo-box {
+    padding: 2em;
+}
+.promo-box-card {
+    padding: 2em;
+    background-color: var(--primary-color);
+    box-shadow: 0px 20px 45px -15px rgba(0,0,0,.7);
+    transition: box-shadow 300ms ease 0ms;
+    color:white;
+}
+.z1{
+    z-index:1;
+}
+.offset-row {
+    margin-top: calc(var(--section-offset));
+    padding: 35px 0;
+    
+}
+.offset-card{
+    display:inline-block;
+    margin-top: calc(0px - var(--section-offset));
+    background-color:white;
+    box-shadow:-5px 5px 24px 7px rgba(0,0,0,.15);
+}
+.offset-card-insert{
+    padding: 4em 0;
+    width:75%;
+    margin:auto;
+}
+
+.image-card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 1.2em;
+}
+.image-card p{margin: 0;}
+.image-card-info{
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color:rgba(50,50,50,.4);
+}
+.feature-card{
+    display:inline-block;
+    width:100%;
+    height:0;
+}
+.feature-card-feature {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    padding-bottom: 56.25%;
+}
+.feature-card-feature iframe{
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.feature-card-info{
+    padding:25px;
+    background-color: var(--primary-color);
+    color:white;
+}
+
+@media (min-width: 768px) {
+    .section2 {
+        margin-top: 0px;
+    }
+    .offset-image-container {
+        margin-bottom: -60px;
+        margin-left: -50px;
+    }
+}
+@media(min-width: 992px){
+    
+}
+
+@media(max-width:768px){
+    .offset-image-container {
+        padding-left: 58px !important;
+        margin-top: -20px;
+    }
+    .offset-card-insert {
+        width: 85%;
+    }
+}
+@media(max-width: 992px){
+    .info-flag{
+        width:90%;
+    }
+    .info-flag-banner{
+        width: 80%;
+        padding: 12px 15px;
+    }
+    
+    
+}
+
