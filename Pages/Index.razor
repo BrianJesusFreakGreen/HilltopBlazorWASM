@@ -121,7 +121,7 @@ else
             <div class="row d-flex justify-content-center text-center p-0">
                 <div class="col-md-6">
                     <div class="">
-                        <h1>This is some filler text.</h1>
+                        <h1>This is some filler text HardCoded, not CMS.</h1>
                         <p>Don't mind me I'm just helping my master design a web app.  I am just here to push down a little bit of white space.</p>
                         <p>perhaps he needs more.  There is another paragraph to help add space.</p>
                         <p>More you say?  Why soitently.</p>
@@ -186,7 +186,7 @@ else
         strapi_api_url = Configuration["AppSettings:STRAPI_API_URL"];
         //var url = "{STRAPI_API_URL}/api/posts";
         //url = url.Replace("{STRAPI_API_URL}", strapi_api_url);
-        string url = "http://blazor.eternalharvestfarm.com/api/posts";
+        string url = "https://blazor.eternalharvestfarm.com/api/posts";
         Console.WriteLine("API call to: " + url);
         
         allPosts = await Http.GetFromJsonAsync<Posts>(url);

@@ -5,17 +5,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>HilltopBlazorWASM</title>
-    <base href="/" />
+    <!--<base href="/" />-->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="HilltopBlazorWASM.styles.css?version" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/hilltopLogo.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div id="app">Loading...</div>
+    <div id="app">
+        <div id="hilltop-logo">
+            <div class="top-mask"></div>
+            <div class="bar b1"></div>
+            <div class="bar b2"></div>
+            <div class="small-bar"></div>
+            <div class="text hilltop">Hilltop</div>
+            <div class="text aog">Assembly of God</div>
+            <div class="loader">
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+            </div>
+        </div>
+    </div>
+    
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.

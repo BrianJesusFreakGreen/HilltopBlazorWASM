@@ -47,7 +47,7 @@ h3 {
     min-height: 400px;
     background-size: cover;
     background-position: top;
-    background-image: url("http://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/hillbanner.jpg");
+    background-image: url("https://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/hillbanner.jpg");
 }
 .cta-video{
     padding-bottom:56.25%;
@@ -161,7 +161,7 @@ h3 {
 }
 .info-flag-banner {
     background-color: white;
-    background-image:url("http://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/HilltopBackgroundBanner2-1.jpg"); 
+    background-image:url("https://hilltop.eternalharvestfarm.com/wp-content/uploads/2021/03/HilltopBackgroundBanner2-1.jpg"); 
     background-size:400%;
     background-position:80% 50%;
     background-repeat:no-repeat;
@@ -185,12 +185,13 @@ h3 {
     z-index:1;
 }
 .offset-row {
+    max-width:1200px;
+    margin:auto;
     margin-top: calc(var(--section-offset));
     padding: 35px 0;
     
 }
 .offset-card{
-    display:inline-block;
     margin-top: calc(0px - var(--section-offset));
     background-color:white;
     box-shadow:-5px 5px 24px 7px rgba(0,0,0,.15);
@@ -237,6 +238,10 @@ h3 {
     padding:25px;
     background-color: var(--primary-color);
     color:white;
+}
+.white-header{
+    color:white;
+    -webkit-text-stroke: 3px black;
 }
 
 @media (min-width: 768px) {
