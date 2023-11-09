@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject HttpClient Http
+@using HilltopBlazorWASM.DataAccess;
 @using System.Net.Http;
 @using System.Web;
 @using System.Net.Http.Json;
@@ -55,9 +56,10 @@ else
                  
             </div>
         </div>
-        
-    </section>
+
+</section>
     <section class="section1">
+        
         <div class="container-lg px-0">
             <div class="row text-center">
                 <div class="col-md-4 p-md-4">
@@ -84,8 +86,9 @@ else
                     <div class="promo-box-cta"></div>
                 </div>
 
+            </div>
         </div>
-        </div>
+        
 
     </section>
     <section class="section2">
@@ -188,22 +191,23 @@ else
         //url = url.Replace("{STRAPI_API_URL}", strapi_api_url);
         string url = "https://blazor.eternalharvestfarm.com/api/posts";
         Console.WriteLine("API call to: " + url);
-        
+
         allPosts = await Http.GetFromJsonAsync<Posts>(url);
 
         /*
         * 
         if (allPosts != null && allPosts.Length > 0)
-            {
+                {
                 foreach (var post in allPosts)
                 {
                 //post.Image.Url = strapi_a && allPosts.Datas.Length > 0pi_url + post.Image.Url;
 
-        }
+    }
     }
 
     */
     }
+
     void Navigate(){
         UriHelper.NavigateTo("Counter");
     }
@@ -211,4 +215,6 @@ else
     private void ToggleCTAStream(){
         collapseCTAStream = !collapseCTAStream;
     }
+    Task t = DynamoDBInitializer.InitializeDynamoDB();
+    
 }

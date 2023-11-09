@@ -6,6 +6,7 @@ using HilltopBlazorWASM;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using HilltopBlazorWASM.DataAccess;
 
 namespace StrapiBlazorBlog
 {
@@ -19,6 +20,7 @@ namespace StrapiBlazorBlog
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             await builder.Build().RunAsync();
+            
         }
 
         public static void ConfigureServices(IServiceCollection services)
@@ -29,6 +31,7 @@ namespace StrapiBlazorBlog
                 var config = provider.GetService<IConfiguration>();
                 return config.GetSection("App").Get<AppSettings>();
             });
+            
         }
     }
 }
