@@ -11,12 +11,10 @@ using System.Threading.Tasks;
 
 namespace HilltopBlazorWASM.DataAccess {
     public static class DynamoDBInitializer {
-        private const string accessKey = "AKIAZJSTU5752NG5M2FU";
-        private const string secretKey = "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";
+        
         public static AmazonDynamoDBClient client;
         public static async Task InitializeDynamoDB(string tableName = "") {
-            var credentials = new BasicAWSCredentials(accessKey, secretKey);
-            client = new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
+            client = new AmazonDynamoDBClient( );
             DynamoDBContext context = new DynamoDBContext(client);
             Task<HilltopTest> testItem = context.LoadAsync<HilltopTest>("Brian");
             Console.WriteLine(testItem.Result);
