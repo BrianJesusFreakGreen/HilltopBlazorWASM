@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject HttpClient Http
 @using HilltopBlazorWASM.DataAccess;
+@using System;
 @using System.Net.Http;
 @using System.Web;
 @using System.Net.Http.Json;
@@ -186,13 +187,14 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        await DynamoDBInitializer.InitializeDynamoDB();
         strapi_api_url = Configuration["AppSettings:STRAPI_API_URL"];
         //var url = "{STRAPI_API_URL}/api/posts";
         //url = url.Replace("{STRAPI_API_URL}", strapi_api_url);
         string url = "https://blazor.eternalharvestfarm.com/api/posts";
         Console.WriteLine("API call to: " + url);
 
-        allPosts = await Http.GetFromJsonAsync<Posts>(url);
+       // allPosts = await Http.GetFromJsonAsync<Posts>(url);
 
         /*
         * 
@@ -215,6 +217,5 @@ else
     private void ToggleCTAStream(){
         collapseCTAStream = !collapseCTAStream;
     }
-    Task t = DynamoDBInitializer.InitializeDynamoDB();
     
 }
