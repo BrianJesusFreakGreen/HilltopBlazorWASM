@@ -8,13 +8,16 @@
 @using System.Threading.Tasks;
 @using Microsoft.Extensions.Configuration;
 @using Models;
+@using HilltopBlazorBlog;
 @inject IConfiguration Configuration
 @inject NavigationManager UriHelper
 
 
 @if (allPosts == null)
 {
-    <p style="color:white;background-color: red;position:absolute;"><em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
+    <p style="color:white;background-color: red;position:absolute;">
+        <em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
+        
     
 }
 else
@@ -211,7 +214,7 @@ else
     }
 
     void Navigate(){
-        UriHelper.NavigateTo("Counter");
+        UriHelper.NavigateTo("event/thing");
     }
 
     private void ToggleCTAStream(){
