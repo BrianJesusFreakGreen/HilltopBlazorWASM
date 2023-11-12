@@ -1,0 +1,27 @@
+﻿@using Models;
+<div class="px-0 py-4">
+    <div class="row offset-row text-center p-0">
+        <div class="col-md-8 p-0">
+            <div class="offset-card align-items-center">
+                <div class="offset-card-insert">
+                    <h4>@ChurchMinistry.Name</h4>
+                    <p class="mt-4">@ChurchMinistry.Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-0 offset-image-container">
+            <div class="image-card">
+                <img src="/images/churchfront.jpg" />
+                <div class="image-card-info">
+                    <p>This Photo Information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    public string? Title { get; set; }
+    public string? Description { get; set; }
+    [Parameter]
+    public AChurchMinistry ChurchMinistry { get; set; }
+    }
