@@ -1,24 +1,19 @@
 ﻿@page "/"
 @inject HttpClient Http
-@using HilltopBlazorWASM.DataAccess;
-@using System;
 @using System.Net.Http;
 @using System.Web;
 @using System.Net.Http.Json;
 @using System.Threading.Tasks;
 @using Microsoft.Extensions.Configuration;
 @using Models;
-@using HilltopBlazorBlog;
 @inject IConfiguration Configuration
 @inject NavigationManager UriHelper
 
 
 @if (allPosts == null)
 {
-    <p style="color:white;background-color: red;position:absolute;">
-        <em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
-        
-    
+    <p style="color:white;background-color: red;position:absolute;"><em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
+     
 }
 else
 {
@@ -60,10 +55,9 @@ else
                  
             </div>
         </div>
-
-</section>
-    <section class="section1">
         
+    </section>
+    <section class="section1">
         <div class="container-lg px-0">
             <div class="row text-center">
                 <div class="col-md-4 p-md-4">
@@ -90,9 +84,8 @@ else
                     <div class="promo-box-cta"></div>
                 </div>
 
-            </div>
         </div>
-        
+        </div>
 
     </section>
     <section class="section2">
@@ -190,35 +183,32 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        await DynamoDBInitializer.InitializeDynamoDB();
         strapi_api_url = Configuration["AppSettings:STRAPI_API_URL"];
         //var url = "{STRAPI_API_URL}/api/posts";
         //url = url.Replace("{STRAPI_API_URL}", strapi_api_url);
         string url = "https://blazor.eternalharvestfarm.com/api/posts";
         Console.WriteLine("API call to: " + url);
-
-       // allPosts = await Http.GetFromJsonAsync<Posts>(url);
+        
+        allPosts = await Http.GetFromJsonAsync<Posts>(url);
 
         /*
         * 
         if (allPosts != null && allPosts.Length > 0)
-                {
+            {
                 foreach (var post in allPosts)
                 {
                 //post.Image.Url = strapi_a && allPosts.Datas.Length > 0pi_url + post.Image.Url;
 
-    }
+        }
     }
 
     */
     }
-
     void Navigate(){
-        UriHelper.NavigateTo("event/thing");
+        UriHelper.NavigateTo("Counter");
     }
 
     private void ToggleCTAStream(){
         collapseCTAStream = !collapseCTAStream;
     }
-    
 }
