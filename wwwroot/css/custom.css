@@ -18,6 +18,15 @@ h4 {
     letter-spacing: 0.4em;
     line-height: 2em;
 }
+.info-block h4:after{
+    content:"";
+    display:block;
+    width:150px;
+    height:4px;
+    margin-top:12px;
+    margin-bottom:15px;
+    background-color:var(--primary-color);
+}
 h2 {
     font-family: 'Didact Gothic',Helvetica,Arial,Lucida,sans-serif;
     text-transform: uppercase;
