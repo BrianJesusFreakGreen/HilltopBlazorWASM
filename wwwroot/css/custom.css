@@ -257,6 +257,7 @@ h3 {
     -webkit-text-stroke: 3px black;
 }
 
+
 @media (min-width: 768px) {
     .section2 {
         margin-top: 0px;
@@ -270,6 +271,9 @@ h3 {
         padding: 35px 0;
     }
     .image-card{width:100%;}
+    .info-block{box-shadow: 5px 2px 5px rgb(150 150 150 / 50%);
+        padding: 10px;
+    }
     
 }
 @media(min-width: 992px){

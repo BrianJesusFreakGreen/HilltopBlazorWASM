@@ -1,0 +1,23 @@
+<section class="info-block">
+    <div class = "container-lg px-0">
+        <div class="row">
+            <div class="col py-4 px-4 d-flex flex-column flex-md-row">
+                <h4>@Title</h4>
+            </div>
+            <div class="col-md py-4-md px-4 d-flex flex-column">
+                <p>@Description</p>
+                <button class="btn btn-white text-uppercase border border-2 border-primary my-3 mx-auto">@ButtonText</button>
+            </div>
+  
+        </div>
+    </div>
+</section>
+
+@code{
+    [Parameter]
+    public string Title {get;set;}
+    [Parameter]
+    public string Description{get;set;}
+    [Parameter]
+    public string ButtonText{get;set;}
+}
