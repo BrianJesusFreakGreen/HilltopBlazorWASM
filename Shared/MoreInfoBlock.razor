@@ -1,3 +1,5 @@
+@inject NavigationManager UriHelper
+
 <section class="info-block">
     <div class = "container-lg px-0">
         <div class="row">
@@ -6,7 +8,7 @@
             </div>
             <div class="col-md py-4-md px-4 d-flex flex-column">
                 <p>@Description</p>
-                <button class="btn btn-white text-uppercase border border-2 border-primary my-3 mx-auto">@ButtonText</button>
+                <button class="btn btn-white text-uppercase border border-2 border-primary my-3 mx-auto" @onclick=@Navigate>@ButtonText</button>
             </div>
   
         </div>
@@ -20,4 +22,10 @@
     public string Description{get;set;}
     [Parameter]
     public string ButtonText{get;set;}
+    [Parameter]
+    public string ButtonLink{ get; set; }
+
+    void Navigate() {
+        UriHelper.NavigateTo(ButtonLink);
+    }
 }

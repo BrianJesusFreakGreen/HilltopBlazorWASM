@@ -12,7 +12,7 @@
 
 @if (allPosts == null)
 {
-    <p style="color:white;background-color: red;position:absolute;"><em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
+   // <p style="color:white;background-color: red;position:absolute;"><em>Having issue communicating with server....Try again later or contact webmaster@hilltopaog.org</em></p>
      
 }
 else
@@ -26,15 +26,15 @@ else
         <div class="bg-haze">
         
             <div class="cta z1 text-center">
-                <h1>Love God. Love People. Pass It On.</h1>
+                <titlecase>Love God. Love People. Pass It On.</titlecase>
                 <div class="cta-video-container">
                     <div class="cta-video @CTAStreamCSSClass">
                         <iframe width="100%" src="https://www.youtube.com/embed/live_stream?channel=UCDZkIokEkrAHYiVUw4KqRxw" frameborder="0" allowfullscreen autplay></iframe>
                     </div>
                 </div>
-                <div class="inverse-btn">
+                <!--<div class="inverse-btn">
                     <button class="btn btn-white text-uppercase" onclick="location.href='/post/TestTitle'" type="button">New Here?</button>
-                </div>
+                </div>-->
                 <div class="inverse-btn">
                     <button class="btn btn-stream text-uppercase" @onclick="ToggleCTAStream" type="button">
                         Live Stream
