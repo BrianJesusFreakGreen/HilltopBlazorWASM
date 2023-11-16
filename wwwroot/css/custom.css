@@ -66,7 +66,7 @@ h3 {
     background-size: cover;
     background-position: top;
     
-    background-image: url('images/churchfront.jpg');
+    background-image: url('~/Images/churchfront.jpg');
 }
 .cta-video{
     padding-bottom:56.25%;
@@ -183,7 +183,7 @@ h3 {
 }
 .info-flag-banner {
     background-color: white;
-    background-image: url('images/hilltopbackgroundbanner2.jpg');
+    background-image: url('~/Images/hilltopbackgroundbanner2.jpg');
     background-size: 400%;
     background-position: 80% 50%;
     background-repeat: no-repeat;
