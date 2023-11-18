@@ -2,13 +2,21 @@
     <div class="bg-haze d-flex flex-fill flex-column justify-content-center">
         <div class="z1 text-center">
             <div class="p-4">
-                <h1 class="white-header">Welcome To Hilltop</h1>
+                <h1 class="white-header">
+                    @if(PageName != null) {
+                        @PageName
+                    }else{ @defaultHeaderText }
+
+                </h1>
             </div>
         </div>
     </div>
 </section>
 
 @code {
-    private string imgPath = "http://localhost:8055/assets/4c59d5d7-d938-49b7-9c8a-b8b7891f4a7e.jpg";
+    [Parameter]
+    public string PageName{ get; set; }
+    public string defaultHeaderText = "Hilltop Assembly";
+    private string imgPath = "/Images/Hilltop_Logo_logo.jpg";
     
 }

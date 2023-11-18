@@ -1,0 +1,40 @@
+@inject NavigationManager UriHelper
+
+
+    
+<div class="personnel-block">
+    <div class="row flex-column">
+        <div class="col py-4 px-4 d-flex justify-content-center">
+            <div class="personnel-img-container">
+                <img src="@imgSrc" />
+            </div>
+                
+        </div>
+        <div class="col py-0 px-4 d-flex flex-column">
+            <h4>@FirstName @LastName</h4>
+        </div>
+        <div class="col-md py-4-md px-4 d-flex flex-column">
+            <p>@Bio</p>
+
+        </div>
+    </div>
+</div>
+
+      
+
+
+@code{
+    [Parameter]
+    public string FirstName { get; set; }
+    [Parameter]
+    public string LastName { get; set; }
+    [Parameter]
+    public string Position { get; set; }
+    [Parameter]
+    public string Bio { get; set; }
+    public string imgSrc;
+    protected override async Task OnInitializedAsync() {
+        imgSrc = "/Images/" + FirstName + ".jpg";
+    }
+
+}
