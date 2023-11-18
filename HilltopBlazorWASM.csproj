@@ -22,4 +22,9 @@
   <ItemGroup>
     <None Include="wwwroot\custom.css" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\routes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
