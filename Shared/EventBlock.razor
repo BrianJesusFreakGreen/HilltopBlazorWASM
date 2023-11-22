@@ -1,14 +1,15 @@
+@using HilltopBlazorWASM.Models;
 @inject NavigationManager UriHelper
 
 <section class="info-block">
     <div class = "container-lg px-0">
         <div class="row">
             <div class="col py-4 px-4 d-flex flex-column flex-md-row">
-                <h4>@Title</h4>
+                <h4>@thisEvent.data.Name</h4>
             </div>
             <div class="col-md py-md-4 px-4 d-flex flex-column">
-                <p>@Description</p>
-                <button class="btn btn-white text-uppercase border border-2 border-primary my-3 mx-auto" @onclick=@Navigate>@ButtonText</button>
+                <p>@thisEvent.data.Description</p>
+                <button class="btn btn-white text-uppercase border border-2 border-primary my-3 mx-auto" @onclick=@Navigate>@ButtonLink</button>
             </div>
   
         </div>
@@ -17,11 +18,7 @@
 
 @code{
     [Parameter]
-    public string Title {get;set;}
-    [Parameter]
-    public string Description{get;set;}
-    [Parameter]
-    public string ButtonText{get;set;}
+    public AEvent thisEvent{ get; set; }
     [Parameter]
     public string ButtonLink{ get; set; }
 
