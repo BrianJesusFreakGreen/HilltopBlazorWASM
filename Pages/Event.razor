@@ -7,8 +7,18 @@
 
 <PageTitle>About</PageTitle>
 
-<PageHeader PageName="Events" />
+<PageHeader PageName="Events"></PageHeader>
+<section class="event-list-container container-md">
+    @foreach(var e in allEvents.data){
+        <EventBlock ButtonLink="event" 
+            Title="@e.Name"
+            Description="@e.Description"
+            ContactName="@e.ContactName"
+        >    
+        </EventBlock>
 
+    }
+</section>
 <!-- POSSIBLY BREAK INTO SEPARATE TEXT SECTION COMPONENT-->
 
 
@@ -23,8 +33,8 @@ want even more, click the link below.  This is the way." ButtonText="Learn More.
                 <div class="twothirds">
                     @if (thisEvent != null)
                     {
-                        <h2>@thisEvent.data.Name</h2>
-                        <p>@thisEvent.data.Description</p>
+                        <h2>@thisEvent.Name</h2>
+                        <p>@thisEvent.Description</p>
                     }
                 </div>
             </div>
@@ -65,7 +75,7 @@ want even more, click the link below.  This is the way." ButtonText="Learn More.
         allEvents = await Http.GetFromJsonAsync<EventList>(url);
         
             thisEvent = await Http.GetFromJsonAsync<AEvent>(thisEventURL);
-            Console.WriteLine(thisEvent.data.Name);
+            Console.WriteLine(thisEvent.Name);
     }
     
     public class EventList {

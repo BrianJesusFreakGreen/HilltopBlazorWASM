@@ -2,8 +2,7 @@
 using System;
 namespace HilltopBlazorWASM.Models {
     public class AEvent{
-        public Data data {  get; set; }
-        public class Data {
+        
 
 
             public string Name { get; set; }
@@ -18,7 +17,7 @@ namespace HilltopBlazorWASM.Models {
         }
         
     
-    }
+    
 
 
 }
