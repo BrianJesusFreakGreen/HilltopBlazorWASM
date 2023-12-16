@@ -67,7 +67,7 @@ want even more, click the link below.  This is the way." ButtonText="Learn More.
 
     public EventList allEvents = null;
     protected override async Task OnInitializedAsync() {
-        string directusURL = "http://54.90.84.193/:8055";
+        string directusURL = "http://54.90.84.193:8055";
         string url = directusURL + "/Items/Event";
         string thisEventURL = directusURL + "/Items/Event/" + EventName;
         HttpClient http = new HttpClient();
